@@ -2,7 +2,7 @@ echo alias k=kubectl > ~/.ckad
 echo 'export do="--dry-run=client -o yaml"'  >> ~/.ckad
 echo 'export now="--grace-period 0 --force"'  >> ~/.ckad
 echo "alias kn='kubectl config set-context --current --namespace '"  >> ~/.ckad
-echo "alias kcur='kubectl config get-context '"  >> ~/.ckad
+echo "alias kcur='kubectl config get-contexts | grep \* '"  >> ~/.ckad
 kubectl completion bash >> ~/.ckad
 echo complete -F __start_kubectl k >> ~/.ckad
 
